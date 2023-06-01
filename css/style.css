@@ -1,0 +1,300 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #007bff;
+}
+
+.start-btn,
+.info-box,
+.quiz-box,
+.result-box {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.start-btn button {
+    padding: 20px 40px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    color: #007bff;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.info-box {
+    background-color: #fff;
+    width: 500px;
+    border-radius: 5px;
+    display: none;
+}
+
+.info-box .info-header {
+    padding: 15px 20px;
+    border-bottom: 2px solid #e9e9e9;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.info-box .info-list {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-bottom: 2px solid #e9e9e9;
+    gap: 5px;
+    font-weight: 400;
+}
+
+.info-box .info-list .info-blue {
+    color: #007bff;
+    font-weight: 500;
+}
+
+.info-box .info-button {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.info-box .info-button button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.info-box .info-button button:nth-child(1) {
+    border: 1px solid #007bff;
+    color: #007bff;
+    background-color: transparent;
+}
+
+.info-box .info-button button:nth-child(1):hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.info-box .info-button button:nth-child(2) {
+    border: 1px solid transparent;
+    color: #fff;
+    background-color: #007bff;
+}
+
+.info-box .info-button button:nth-child(2):hover {
+    background-color: transparent;
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.quiz-box {
+    background-color: #fff;
+    width: 600px;
+    border-radius: 5px;
+    display: none;
+}
+
+.quiz-box .quiz-header {
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-box .quiz-header .quiz-title {
+    font-weight: 600;
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+}
+
+.quiz-box .quiz-header .time-left {
+    background-color: #cde5fe;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.quiz-box .quiz-header .time-left .time-text {
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.quiz-box .quiz-header .time-left .time {
+    background-color: #343a3f;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.quiz-box .quiz-main {
+    padding: 30px;
+}
+
+.quiz-box .quiz-main .quiz-question {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.quiz-box .quiz-main .quiz-answers {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.quiz-box .quiz-main .quiz-answers .quiz-option {
+    background-color: #f0f8ff;
+    border: 1px solid #84c5fe;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quiz-box .quiz-main .quiz-answers .quiz-option .icon {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 15px;
+    pointer-events: none;
+    border: 2px solid transparent;
+}
+
+.quiz-box .quiz-main .quiz-answers .quiz-option .icon.tick {
+    color: #23902c;
+    background-color: #d4edda;
+    border-color: #23902c;
+}
+
+.quiz-box .quiz-main .quiz-answers .quiz-option .icon.cross {
+    color: #a42834;
+    background-color: #f8d7da;
+    border-color: #a42834;
+}
+
+.quiz-box .quiz-footer {
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.quiz-box .quiz-footer .quiz-bold {
+    font-weight: 600;
+}
+
+.quiz-box .quiz-footer button {
+    background-color: #007bff;
+    border: 1px solid transparent;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all .2s;
+    font-weight: 500;
+}
+
+.quiz-box .quiz-footer button:hover {
+    background-color: transparent;
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.result-box {
+    background-color: #fff;
+    width: 450px;
+    height: auto;
+    border-radius: 5px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.result-box .result-icon {
+    font-size: 8rem;
+    color: #007bff;
+}
+
+.result-box .result-text {
+    text-align: center;
+    width: 80%;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.result-box .result-text .result-bold {
+    font-weight: 600;
+}
+
+.result-box .result-buttons {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.result-box .result-buttons button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.result-box .result-buttons button:nth-child(1) {
+    border: 1px solid #007bff;
+    color: #007bff;
+    background-color: transparent;
+}
+
+.result-box .result-buttons button:nth-child(1):hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.result-box .result-buttons button:nth-child(2) {
+    border: 1px solid transparent;
+    color: #fff;
+    background-color: #007bff;
+}
+
+.result-box .result-buttons button:nth-child(2):hover {
+    background-color: transparent;
+    color: #007bff;
+    border-color: #007bff;
+}
