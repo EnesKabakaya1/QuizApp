@@ -14,7 +14,7 @@
 
 <body>
     <div class="start-btn">
-        <button type="button">Start Quiz</button>
+        <button type="button" id="start-quiz-game">Start Quiz</button>
     </div>
 
     <div class="info-box">
@@ -29,8 +29,8 @@
             <span>5.You'll get points on the basis of your correct answers.</span>
         </div>
         <div class="info-button">
-            <button>Exit Quiz</button>
-            <button>Continue</button>
+            <button id="exit-quiz-btn">Exit Quiz</button>
+            <button id="continue-quiz-btn">Continue</button>
         </div>
     </div>
 
@@ -44,7 +44,7 @@
         </div>
         <div class="quiz-main">
             <div class="quiz-question">
-                <span>What does HTML stand for?</span>
+                <span id="question-text">What does HTML stand for?</span>
             </div>
             <div class="quiz-answers">
                 <div class="quiz-option">
@@ -68,8 +68,8 @@
             </div>
         </div>
         <div class="quiz-footer">
-            <span><span class="quiz-bold">2</span> of <span class="quiz-bold">5</span> Questions</span>
-            <button type="button">Next Que</button>
+            <span id="quiz-counter"></span>
+            <button type="button" id="next-btn">Next Que</button>
         </div>
     </div>
 
@@ -88,7 +88,9 @@
         </div>
     </div>
 
+    <script src="js/question.js"></script>
     <script src="js/script.js"></script>
+
 </body>
 
 </html>
