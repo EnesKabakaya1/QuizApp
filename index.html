@@ -41,30 +41,13 @@
                 <span class="time-text">Time Left</span>
                 <span class="time">15</span>
             </div>
+            <div class="time-line"></div>
         </div>
         <div class="quiz-main">
             <div class="quiz-question">
-                <span id="question-text">What does HTML stand for?</span>
+                <span id="question-text"></span>
             </div>
             <div class="quiz-answers">
-                <div class="quiz-option">
-                    <span>Hyper Text Preprocessor</span>
-                    <div class="icon tick">
-                        <i class="fa-solid fa-check"></i>
-                    </div>
-                </div>
-                <div class="quiz-option">
-                    <span>Hyper Text Markup Language</span>
-                    <div class="icon cross">
-                        <i class="fa-solid fa-xmark"></i>
-                    </div>
-                </div>
-                <div class="quiz-option">
-                    <span>Hyper Text Multiple Language</span>
-                </div>
-                <div class="quiz-option">
-                    <span>Hyper Tool Multi Language</span>
-                </div>
             </div>
         </div>
         <div class="quiz-footer">
@@ -79,12 +62,11 @@
         </div>
         <div class="result-text">
             <span>You've completed the Quiz!</span>
-            <span>and sory, You got only <span class="result-bold">2</span> out of <span
-                    class="result-bold">5</span></span>
+            <span id="result-text"></span>
         </div>
         <div class="result-buttons">
-            <button type="button">Replay Quiz</button>
-            <button type="button">Quit Quiz</button>
+            <button type="button" id="replay-quiz">Replay Quiz</button>
+            <button type="button" id="quit-quiz">Quit Quiz</button>
         </div>
     </div>
 

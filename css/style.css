@@ -124,6 +124,7 @@ body {
     display: flex;
     justify-content: space-between;
     box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .quiz-box .quiz-header .quiz-title {
@@ -179,6 +180,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    user-select: none;
+    cursor: pointer;
 }
 
 .quiz-box .quiz-main .quiz-answers .quiz-option .icon {
@@ -205,6 +208,31 @@ body {
     border-color: #a42834;
 }
 
+.quiz-box .quiz-main .quiz-answers .quiz-option.correct {
+    color: #23902c;
+    background-color: #d4edda;
+    border-color: #23902c;
+}
+
+.quiz-box .quiz-main .quiz-answers .quiz-option.incorrect {
+    color: #a42834;
+    background-color: #f8d7da;
+    border-color: #a42834;
+}
+
+.quiz-box .quiz-main .quiz-answers .quiz-option.disabled {
+    pointer-events: none;
+}
+
+.quiz-box .quiz-header .time-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #007bff;
+}
+
 .quiz-box .quiz-footer {
     padding: 10px 30px;
     display: flex;
@@ -227,6 +255,11 @@ body {
     cursor: pointer;
     transition: all .2s;
     font-weight: 500;
+    display: none;
+}
+
+.quiz-box .quiz-footer button.active-button {
+    display: block;
 }
 
 .quiz-box .quiz-footer button:hover {
@@ -244,6 +277,10 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.result-box.active-result-box {
+    display: flex;
 }
 
 .result-box .result-icon {
